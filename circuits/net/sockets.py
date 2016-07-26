@@ -43,7 +43,7 @@ from .events import close, closed, connect, connected, disconnect, \
 
 
 BUFSIZE = 4096  # 4KB Buffer
-BACKLOG = 5000  # 5K Concurrent Connections
+BACKLOG = 128   # 128 connections is what's used by default in Python 3.5+,
 
 
 def do_handshake(sock, on_done=None, on_error=None, extra_args=None):
